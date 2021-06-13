@@ -8,7 +8,13 @@
 - requirements.txt
 - enen_core_web_sm == 3.0.0
 
-还需要去 Release 页面下载对应的与训练词向量文件, 文件是经过处理后的 `glove.840B.300d.txt `, 被打包成了一份索引文件和向量文件, 下载之后解压至 `data/hotspot/` 目录下
+> **Note**
+>
+> You can just run `install_env.sh` to install needed local virtual python env.
+>
+> If you use `install_env.sh` to install local venv, remember to replace all "python3" to you "env/bin/python3" in below commands.
+
+还需要去[Release 页面](https://github.com/ww-rm/Public-Opinion-Analysis/releases/tag/1.0.0)以及[百度网盘(提取码：6666)](https://pan.baidu.com/s/1XVdxRmeoLu0uSu4KUW-INg)下载对应的预训练词向量文件和停用词文件, 文件是经过处理后的 `glove.840B.300d.txt`, 被打包成了一份索引文件和向量文件, 下载之后解压至 `data/hotspot/` 目录下
 
 ```plain
 data/
@@ -21,9 +27,7 @@ data/
 
 > **Note**
 >
-> You can just run `install_env.sh` to install needed local virtual python env.
->
-> If you use `install_env.sh` to install local venv, remember to replace all "python3" to you "env/bin/python3" in below commands.
+> However, if you just have the file `glove.840B.300d.txt`, you can use command `python3 -m hotspot.glove_vec glove.840B.300d.txt data/hotspot/glove.840B.300d/` to generate the index and vector files.
 
 ## Usage
 
@@ -141,4 +145,4 @@ data/
 
 ## Run server
 
-使用 `python3 manage.py runserver` 启动服务器, 项目基于 Django 实现, 其余选项与 Django 相同.
+使用 `python3 manage.py runserver 127.0.0.1:80` 启动服务器, 项目基于 Django 实现, 其余选项与 Django 相同.
