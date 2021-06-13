@@ -1,7 +1,7 @@
 CURPATH=$(cd "$(dirname "$0")"; pwd)
 cd $CURPATH
 
-if [! -d "env"]; then
+if [ ! -d "env" ]; then
     ENV_PY="env/bin/python3"
 else
     ENV_PY="python3"

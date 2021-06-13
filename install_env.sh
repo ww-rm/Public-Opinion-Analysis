@@ -4,7 +4,7 @@
 ENV="env"
 ENV_PY="$ENV/bin/python3"
 
-if [! -d $ENV]; then
+if [ ! -d $ENV ]; then
     python3 -m venv $ENV
 fi
 
