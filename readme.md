@@ -13,6 +13,7 @@
 ```plain
 data/
     hotspot/
+        stopwords.txt
         glove.840B.300d/
             pretrained_wv.index.json
             pretrained_wv.vec.dat

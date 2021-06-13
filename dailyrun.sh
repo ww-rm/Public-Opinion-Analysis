@@ -1,10 +1,10 @@
 CURPATH=$(cd "$(dirname "$0")"; pwd)
 cd $CURPATH
 
-if [ ! -d "env" ]; then
-    ENV_PY = "env/bin/python3"
+if [! -d "env"]; then
+    ENV_PY="env/bin/python3"
 else
-    ENV_PY = "python3"
+    ENV_PY="python3"
 fi
 
 $ENV_PY -m crawlers && \
