@@ -275,10 +275,10 @@ def get_doc_vector(words, glove, alpha=0.2, model_path='local.model', stopwords_
         # 若存在训练过的model，直接载入
         print('Loading model...')
         model = Word2Vec.load(model_path)
-        # # 添加语料
-        # model.build_vocab(words, update=True)
-        # # 增量训练
-        # model.train(words, total_examples=model.corpus_count, epochs=model.epochs)
+        # 添加语料
+        model.build_vocab(words, update=True)
+        # 增量训练
+        model.train(words, total_examples=model.corpus_count, epochs=model.epochs)
         # 保存模型
         model.save(model_path)
         print('saving model...')
