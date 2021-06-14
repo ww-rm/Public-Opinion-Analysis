@@ -23,7 +23,6 @@ jobs:
     - name: Install dependencies
       run: |
         bash install_env.sh
-        ./env/bin/python3 -m pip install --upgrade pip
     - name: Auto crawl
       run: |
         ./env/bin/python3 -m crawlers

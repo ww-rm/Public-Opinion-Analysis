@@ -9,5 +9,6 @@ if [ ! -d $ENV ]; then
 fi
 
 # install dependencies
+$ENV_PY -m pip install --upgrade pip
 $ENV_PY -m pip install -r "requirements.txt"
 $ENV_PY -m pip install "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz"
