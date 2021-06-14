@@ -22,8 +22,8 @@ jobs:
         python-version: 3.7.9
     - name: Install dependencies
       run: |
-        python3 -m pip install --upgrade pip
         bash install_env.sh
+        ./env/bin/python3 -m pip install --upgrade pip
     - name: Auto crawl
       run: |
         ./env/bin/python3 -m crawlers
