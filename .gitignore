@@ -139,7 +139,9 @@ _test/
 tmp/*
 
 # data
-data/**/*.*
+local.model
+pretrained_wv.index.json
+pretrained_wv.vec.dat
 
 # .gitkeep
 !.gitkeep
