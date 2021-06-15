@@ -1,21 +1,21 @@
 # crawlers
-requests == 2.25.1
-beautifulsoup4 == 4.9.3
-lxml == 4.6.3
-tqdm == 4.60.0
+requests==2.25.1
+beautifulsoup4==4.9.3
+lxml==4.6.3
+tqdm==4.60.0
 
 # hotspot
-scikit-learn == 0.24.2
-sumy == 0.8.1
-yake == 0.4.8
+scikit-learn==0.24.2
+sumy==0.8.1
+yake==0.4.8
 
 # knowledge graph
-pandas == 1.2.4
-spacy == 3.0.6
+pandas==1.2.4
+spacy==3.0.6
 # install it by `python -m spacy download en-core-web-sm`
 # or `python -m pip install en_core_web_sm-3.0.0.tar.gz`
-# en-core-web-sm == 3.0.0 
+# en-core-web-sm==3.0.0 
 
 # site app
-pyecharts == 1.9.0
-django == 2.2.24
+pyecharts==1.9.0
+django==2.2.24
