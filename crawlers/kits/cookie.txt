@@ -1,2 +1,0 @@
-#LWP-Cookies-2.0
-Set-Cookie3: __cfduid=d2876c262059a22a3a406d4c82094ba761614568243; path="/"; domain=".dailynews.lk"; path_spec; domain_dot; expires="2021-03-31 03:10:43Z"; HttpOnly=None; SameSite=Lax; version=0

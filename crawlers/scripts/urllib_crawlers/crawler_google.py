@@ -82,7 +82,7 @@ class PageParser:
         }
         soup = BeautifulSoup(text, "lxml")
         date = soup.find("li", {"class": "story-postdate"})
-        if date.content is not None:
+        if date is not None and date.content is not None:
             result["Time"] = date.content[1]
         result["Headline"] = soup.title.string
         result["Text"] = "".join([i.text for i in soup.find_all("p")])
@@ -100,7 +100,8 @@ class PageParser:
             "AdditionalKeyWord": ""
         }
         article = BeautifulSoup(text, "lxml").find("article")
-
+        if article is None:
+            return self.www_default_com(text)
         result["Type"] = (
             article.find("header")
             .find("span", {"class": "article__category"})
