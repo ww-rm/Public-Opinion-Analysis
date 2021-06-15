@@ -19,6 +19,7 @@ if __name__ == "__main__":
     kg_dir = Path("./data/kg/")
 
     topic_files = topic_dir.glob("*-[0-9].json")
+    # 这一步是按照文件的日期升序迭代的, 时间一定是由前到后
     for topic_file in tqdm(topic_files):
         with topic_file.open("r", encoding="utf8") as f:
             topic = json.load(f)[0]
@@ -46,17 +47,16 @@ if __name__ == "__main__":
         else:
             topic_db[topic_title]["hotscore"][date] = topic.get("hotscore", 1)
 
-        # 如果是当前最新则更新话题详细信息, 词云, 知识图谱内容
-        if date == today:
-            topic_db[topic_title]["detail"] = topic.get("detail", "detail")
-            topic_db[topic_title]["keywords_cloud"] = sorted(
-                map(lambda x: [x[0], (1/x[1])], topic.get("keywords_cloud")),
-                key=lambda x: x[1],
-                reverse=True
-            )
-            with kg_dir.joinpath(topic_file.stem).with_suffix(".txt").open("r", encoding="utf8") as f:
-                kg_data = [line.strip("\n").split("\t") for line in f.readlines()[:30]]
-            topic_db[topic_title]["knowledge"] = kg_data
+        # 用当前最新则更新话题详细信息, 词云, 知识图谱内容
+        topic_db[topic_title]["detail"] = topic.get("detail", "detail")
+        topic_db[topic_title]["keywords_cloud"] = sorted(
+            map(lambda x: [x[0], (1/x[1])], topic.get("keywords_cloud")),
+            key=lambda x: x[1],
+            reverse=True
+        )
+        with kg_dir.joinpath(topic_file.stem).with_suffix(".txt").open("r", encoding="utf8") as f:
+            kg_data = [line.strip("\n").split("\t") for line in f.readlines()[:30]]
+        topic_db[topic_title]["knowledge"] = kg_data
 
     # 生成数据库
     with timeline_db_path.open("w", encoding="utf8") as f:
