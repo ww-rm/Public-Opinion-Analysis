@@ -11,7 +11,7 @@ import kgraph
 # )
 
 # # local hotspot generate test
-hotspot.run()
+# hotspot.run()
 
 # # local knowledge graph test
 # kgraph.run()
