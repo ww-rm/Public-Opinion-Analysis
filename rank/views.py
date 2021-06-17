@@ -226,7 +226,7 @@ def rank(request):
     data = {"rank_message": rank_message}
     return render(request, "rank.html", data)
 
-
+ 
 def render_graph_chart(dat):
     nodes_data = []
     links_data = []
