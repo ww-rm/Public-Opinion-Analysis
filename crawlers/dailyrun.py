@@ -26,8 +26,8 @@ def run(save_dir="./data/crawler_data", proxies: dict = None) -> bool:
     if proxies:
         spider.proxies = proxies.copy()
 
-    # use UTC datetime stamp
-    day_time = datetime.now(timezone(timedelta(0))).strftime("%Y-%m-%d")
+    # use Bejjing datetime stamp
+    day_time = datetime.now(timezone(timedelta(8))).strftime("%Y-%m-%d")
 
     # create save dir
     save_dir = Path(save_dir, day_time)
