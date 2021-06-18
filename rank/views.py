@@ -8,6 +8,12 @@ import math
 from datetime import datetime
 from urllib.parse import quote, unquote
 
+from pyecharts.globals import CurrentConfig
+default_host = CurrentConfig.ONLINE_HOST
+print(default_host)
+custom_host = "https://cdnjs.cloudflare.com/ajax/libs/echarts/4.8.0/"
+CurrentConfig.ONLINE_HOST = custom_host
+
 from pyecharts.types import Tooltip
 
 area_color_js = (
