@@ -37,7 +37,9 @@ def get_data():
     detail=[]
     cloud_word=[]
     for t in topic:
-        detail.append(topic_data[t]["detail"])
+        tmp = topic_data[t]["detail"]
+        tmp = "<br>".join(tmp.split("<br>")[:10])
+        detail.append(tmp)
         hotscore.append(topic_data[t]["hotscore"])
         cloud_word.append(topic_data[t]["keywords_cloud"])
     return topic,detail,hotscore,cloud_word

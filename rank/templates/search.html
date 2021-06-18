@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="/statics/js/echarts.min.js"></script>
+    <!-- <script src="/static/js/echarts.min.js"></script> -->
 
 
     <div class="clearfix"></div>
@@ -234,7 +234,7 @@
                     </div>
 
                     <div class=" col-md-3 " style=" height: 100%; ">
-                        <button type=" submit " class=" btn btn-block btn-lg btn-primary  ">Search It!</button>
+                        <button type=" submit " class=" btn btn-block btn-lg btn-primary ">Search It!</button>
                     </div>
 
                 </div>
@@ -260,7 +260,7 @@
 
                                 <li class=" wow fadeInRight animated " data-wow-offset=" 0 " data-wow-duration=" 0.5s ">
                                     <myfirst style=" min-width: 100%; ">
-                                        <h4><i class=" fa fa-bookmark pink "></i> <a href=" /details/?topic={{i}} " target=" _blank " style=" color: white; ">{{i}}</a></h4>
+                                        <h4><i class=" fa fa-bookmark pink "></i> <a href=" /details/?topic={{i|urlencode}} " target=" _blank " style=" color: white; ">{{i}}</a></h4>
                                         <p>
                                             {{j|safe}}<span class=" bold "></span>
                                         </p>

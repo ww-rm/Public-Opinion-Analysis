@@ -19,9 +19,10 @@
     <link href="/static/css/animate.min.css" rel="stylesheet">
     <!-- theme stylesheet -->
     <link href="/static/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="/static/css/bootstrap-detail.min.css">
+
+    <script src="/static/js/jquery-detail.min.js"></script>
+    <script src="/static/js/bootstrap-detail.min.js"></script>
 </head>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1707" height="818" xml:space="preserve" style="position: fixed;top: 0;">
     <desc>JavaScript chart by amCharts 3.21.15</desc>
@@ -213,7 +214,7 @@
     </g>
 </svg>
 
-<body >
+<body>
     <h1 class="text-center" style="color: white;position: relative;max-width: 60%;margin: 0 auto;">{{topic}}</h1>
     <div style="padding-left: 20%;">
         {{line_chart | safe}}
