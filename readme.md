@@ -133,6 +133,54 @@ data/
 
     `timeline.json` 包含每一天对应的话题, `topic.json` 包含每一个话题的历史热度和词云等详细信息
 
+    数据格式如下所示
+
+    `timeline.json`
+
+    ```json
+    {
+      "2021-06-13": [
+          "Taiwan scho...",
+          "Ion Orch...",
+          "Malays...",
+          "Japan c...",
+          "..."
+      ],
+      "2021-06-14": [
+          "KL, Putr..."
+      ],
+      "2021-06-15": [
+          "..."
+      ],
+      "...": ["..."]
+    }
+    ```
+
+    `topic.json`
+
+    ```json
+    {
+      "Taiwan scho...": {
+          "hotscore": { "2021-06-13": 98.57970148547562 },
+          "detail": "Related news:<br><a href = \"https://www.scmp.com/sport/football/article/3137118/euro-2020-we-got-christian-b...",
+          "keywords_cloud": [
+              ["medicinal personnel wait", 131.66490948244035],
+              ["tzu chi hospital", 89.08234495385912],
+              ["taipei tzu chi", 77.15450167663192],
+              ["...", 0]
+          ],
+          "knowledge": [
+              ["Taiwan scholar", "Tsai", "sue"],
+              ["medicinal  personnel", "new taipei june", "afp"],
+              ["10894d)best", "chrome browsers", "berhad"]
+          ]
+      },
+      "...": {
+          "...": ""
+      }
+    }
+    ```
+
 ## Add crontabs
 
 可以在 linux 平台上使用 `crontab` 命令将上述三个指令设定为每天定时运行
